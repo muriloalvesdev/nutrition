@@ -13,7 +13,7 @@ public class Nutricionista {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID uuid;
 
     @Column(name = "nutricionista")
     private String name;
@@ -29,11 +29,13 @@ public class Nutricionista {
 
     public Nutricionista(String name, String sobrenome, String idade,
             String crn) {
-        super();
         this.name = name;
         this.sobrenome = sobrenome;
         this.idade = idade;
         this.crn = crn;
+    }
+
+    public Nutricionista() {
     }
 
     public String getName() {
@@ -69,16 +71,16 @@ public class Nutricionista {
     }
 
     public UUID getId() {
-        return id;
+        return uuid;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setId(UUID uuid) {
+        this.uuid = uuid;
     }
 
     @Override
     public String toString() {
-        return "Nutricionista [id=" + id + ", name=" + name + ", sobrenome="
+        return "Nutricionista [id=" + uuid + ", name=" + name + ", sobrenome="
                 + sobrenome + ", idade=" + idade + ", crn=" + crn + "]";
     }
 
