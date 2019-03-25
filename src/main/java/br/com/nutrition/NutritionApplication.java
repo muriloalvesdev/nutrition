@@ -1,4 +1,4 @@
-package br.com.nutrition.nutrition;
+package br.com.nutrition;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
