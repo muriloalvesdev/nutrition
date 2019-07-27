@@ -1,4 +1,4 @@
-package br.com.nutrition.nutrition;
+package br.com.nutrition;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
