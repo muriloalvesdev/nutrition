@@ -1,0 +1,4 @@
+br/com/nutrition/service/BuscarNutricionistasServiceImplTest.class
+br/com/nutrition/NutritionApplicationTests.class
+br/com/nutrition/service/BuscarNutricionistaPorIdServiceImplTest.class
+br/com/nutrition/service/CadastroNutricionistaServiceImplTest.class

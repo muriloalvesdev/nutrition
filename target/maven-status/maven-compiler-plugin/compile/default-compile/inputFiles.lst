@@ -1,4 +1,11 @@
-/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/model/Cliente.java
+/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/service/CadastroNutricionistaServiceImpl.java
+/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/exception/NutricionistaResourceException.java
 /Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/repository/NutricionistaRepository.java
+/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/service/BuscarNutricionistaPorIdServiceImpl.java
+/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/exception/NutricionistaNotFoundException.java
 /Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/NutritionApplication.java
-/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/model/Nutricionista.java
+/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/service/BuscarNutricionistasServiceImpl.java
+/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/controller/NutricionistaController.java
+/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/resource/model/NutricionistaResource.java
+/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/service/NutricionistaConversor.java
+/Users/murilohenriquealvesbatista/Documents/Murilo/nutrition/src/main/java/br/com/nutrition/datasource/model/Nutricionista.java

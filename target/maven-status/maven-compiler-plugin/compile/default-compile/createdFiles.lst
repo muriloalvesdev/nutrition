@@ -1,0 +1,11 @@
+br/com/nutrition/datasource/model/Nutricionista.class
+br/com/nutrition/exception/NutricionistaResourceException.class
+br/com/nutrition/service/CadastroNutricionistaServiceImpl.class
+br/com/nutrition/NutritionApplication.class
+br/com/nutrition/controller/NutricionistaController.class
+br/com/nutrition/service/BuscarNutricionistaPorIdServiceImpl.class
+br/com/nutrition/exception/NutricionistaNotFoundException.class
+br/com/nutrition/service/BuscarNutricionistasServiceImpl.class
+br/com/nutrition/service/NutricionistaConversor.class
+br/com/nutrition/repository/NutricionistaRepository.class
+br/com/nutrition/resource/model/NutricionistaResource.class
