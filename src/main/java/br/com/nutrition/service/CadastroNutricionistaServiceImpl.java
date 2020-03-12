@@ -12,24 +12,22 @@ import br.com.nutrition.resource.model.NutricionistaResource;
 @Service
 public class CadastroNutricionistaServiceImpl {
 
-    private static final Logger LOG = Logger
-            .getLogger(CadastroNutricionistaServiceImpl.class);
+  private static final Logger LOG = Logger.getLogger(CadastroNutricionistaServiceImpl.class);
 
-    @Autowired
-    private NutricionistaRepository nutricionistaRepository;
+  @Autowired
+  private NutricionistaRepository nutricionistaRepository;
 
-    @Autowired
-    private NutricionistaConversor service;
+  @Autowired
+  private NutricionistaConversor service;
 
-    public void cadastro(NutricionistaResource nutricionistaResource) {
+  public void cadastro(NutricionistaResource nutricionistaResource) {
 
-        try {
-            Nutricionista nutricionista = service
-                    .conversor(nutricionistaResource);
-            nutricionistaRepository.saveAndFlush(nutricionista);
-        } catch (NutricionistaResourceException e) {
-            LOG.error("Erro ao salvar o nutricionista: " + e.getMessage(), e);
-        }
+    try {
+      Nutricionista nutricionista = service.conversor(nutricionistaResource);
+      nutricionistaRepository.saveAndFlush(nutricionista);
+    } catch (NutricionistaResourceException e) {
+      LOG.error("Erro ao salvar o nutricionista: " + e.getMessage(), e);
     }
+  }
 
 }

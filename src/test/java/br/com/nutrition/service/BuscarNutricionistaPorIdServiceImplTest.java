@@ -23,30 +23,29 @@ import br.com.nutrition.repository.NutricionistaRepository;
 @Sql(scripts = "/sql/insert_nutri_para_test_buscar_por_id.sql")
 public class BuscarNutricionistaPorIdServiceImplTest {
 
-    @Autowired
-    private BuscarNutricionistaPorIdServiceImpl serviceImpl;
+  @Autowired
+  private BuscarNutricionistaPorIdServiceImpl serviceImpl;
 
-    @Autowired
-    private NutricionistaRepository nutricionistaRepository;
+  @Autowired
+  private NutricionistaRepository nutricionistaRepository;
 
-    @Test
-    public void buscarPorIdTest() throws NutricionistaNotFoundException {
+  @Test
+  public void buscarPorIdTest() throws NutricionistaNotFoundException {
 
-        Nutricionista nutricionista = serviceImpl.buscarPorId(11L);
+    Nutricionista nutricionista = serviceImpl.buscarPorId(11L);
 
-        assertEquals("123", nutricionista.getCodigoRegistro());
-        assertEquals("123", String.valueOf(nutricionista.getId_paciente()));
-        assertEquals("murilo", nutricionista.getNome());
-    }
+    assertEquals("123", nutricionista.getCodigoRegistro());
+    assertEquals("123", String.valueOf(nutricionista.getId_paciente()));
+    assertEquals("murilo", nutricionista.getNome());
+  }
 
-    @Test
-    public void deletarPorIdTest() throws NutricionistaNotFoundException {
-        serviceImpl.deletarPorId(11L);
+  @Test
+  public void deletarPorIdTest() throws NutricionistaNotFoundException {
+    serviceImpl.deletarPorId(11L);
 
-        Optional<Nutricionista> optionalNutricionista = nutricionistaRepository
-                .findById(11L);
+    Optional<Nutricionista> optionalNutricionista = nutricionistaRepository.findById(11L);
 
-        assertFalse(optionalNutricionista.isPresent());
-    }
+    assertFalse(optionalNutricionista.isPresent());
+  }
 
 }

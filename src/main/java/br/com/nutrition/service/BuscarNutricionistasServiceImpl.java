@@ -11,12 +11,11 @@ import br.com.nutrition.repository.NutricionistaRepository;
 @Service
 public class BuscarNutricionistasServiceImpl {
 
-    @Autowired
-    private NutricionistaRepository nutricionistaRepository;
+  @Autowired
+  private NutricionistaRepository nutricionistaRepository;
 
-    public List<Nutricionista> buscarTodosOsNutricionistas() {
-        List<Nutricionista> listNutricionista = nutricionistaRepository
-                .findAll();
-        return listNutricionista;
-    }
+  public List<Nutricionista> buscarTodosOsNutricionistas() {
+    List<Nutricionista> listNutricionista = nutricionistaRepository.findAll();
+    return listNutricionista;
+  }
 }

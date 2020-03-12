@@ -21,35 +21,34 @@ import br.com.nutrition.resource.model.NutricionistaResource;
 @Sql(scripts = "/sql/delete_nutricionistas.sql")
 public class CadastroNutricionistaServiceImplTest {
 
-    @Autowired
-    private CadastroNutricionistaServiceImpl serviceImpl;
+  @Autowired
+  private CadastroNutricionistaServiceImpl serviceImpl;
 
-    @Autowired
-    private NutricionistaRepository nutricionistaRepository;
+  @Autowired
+  private NutricionistaRepository nutricionistaRepository;
 
-    private NutricionistaResource resource;
+  private NutricionistaResource resource;
 
-    @Before
-    public void setUp() {
-        resource = new NutricionistaResource();
-        resource.setCodigoRegistro("987654");
-        resource.setIdade("1980-01-01");
-        resource.setIdPaciente("9876543");
-        resource.setNome("Murilo");
-    }
+  @Before
+  public void setUp() {
+    resource = new NutricionistaResource();
+    resource.setCodigoRegistro("987654");
+    resource.setIdade("1980-01-01");
+    resource.setIdPaciente("9876543");
+    resource.setNome("Murilo");
+  }
 
-    @Test
-    public void cadastroTest() {
-        serviceImpl.cadastro(resource);
+  @Test
+  public void cadastroTest() {
+    serviceImpl.cadastro(resource);
 
-        Nutricionista nutricionista = nutricionistaRepository.findAll().stream()
-                .filter(nutri -> nutri.getNome().equals("Murilo")).findFirst()
-                .get();
+    Nutricionista nutricionista = nutricionistaRepository.findAll().stream()
+        .filter(nutri -> nutri.getNome().equals("Murilo")).findFirst().get();
 
-        assertEquals("987654", nutricionista.getCodigoRegistro());
-        assertEquals("Murilo", nutricionista.getNome());
-        assertEquals("9876543", String.valueOf(nutricionista.getId_paciente()));
-        assertEquals("1980-01-01", String.valueOf(nutricionista.getIdade()));
-    }
+    assertEquals("987654", nutricionista.getCodigoRegistro());
+    assertEquals("Murilo", nutricionista.getNome());
+    assertEquals("9876543", String.valueOf(nutricionista.getId_paciente()));
+    assertEquals("1980-01-01", String.valueOf(nutricionista.getIdade()));
+  }
 
 }

@@ -4,7 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.com.nutrition.datasource.model.Nutricionista;
 
-public interface NutricionistaRepository
-        extends JpaRepository<Nutricionista, Long> {
+public interface NutricionistaRepository extends JpaRepository<Nutricionista, Long> {
 
 }

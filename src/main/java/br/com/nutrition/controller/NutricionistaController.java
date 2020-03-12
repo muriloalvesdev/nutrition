@@ -22,38 +22,35 @@ import br.com.nutrition.service.CadastroNutricionistaServiceImpl;
 @RequestMapping(value = "/api")
 public class NutricionistaController {
 
-    @Autowired
-    private BuscarNutricionistasServiceImpl serviceBuscar;
+  @Autowired
+  private BuscarNutricionistasServiceImpl serviceBuscar;
 
-    @Autowired
-    private CadastroNutricionistaServiceImpl serviceCadastro;
+  @Autowired
+  private CadastroNutricionistaServiceImpl serviceCadastro;
 
-    @Autowired
-    private BuscarNutricionistaPorIdServiceImpl serviceBuscarPorId;
+  @Autowired
+  private BuscarNutricionistaPorIdServiceImpl serviceBuscarPorId;
 
-    @GetMapping(path = "/nutricionistas")
-    public List<Nutricionista> buscarNutricionistas() {
-        return serviceBuscar.buscarTodosOsNutricionistas();
-    }
+  @GetMapping(path = "/nutricionistas")
+  public List<Nutricionista> buscarNutricionistas() {
+    return serviceBuscar.buscarTodosOsNutricionistas();
+  }
 
-    @GetMapping(path = "/nutricionista/id/{id}")
-    public Nutricionista buscarNutricionistasPorId(
-            @PathVariable(name = "id", required = true) Long id)
-            throws NutricionistaNotFoundException {
-        return serviceBuscarPorId.buscarPorId(id);
-    }
+  @GetMapping(path = "/nutricionista/id/{id}")
+  public Nutricionista buscarNutricionistasPorId(
+      @PathVariable(name = "id", required = true) Long id) throws NutricionistaNotFoundException {
+    return serviceBuscarPorId.buscarPorId(id);
+  }
 
-    @PostMapping(path = "/nutricionista/save")
-    public void salvarNutricionista(
-            @RequestBody NutricionistaResource nutricionista) {
-        serviceCadastro.cadastro(nutricionista);
-    }
+  @PostMapping(path = "/nutricionista/save")
+  public void salvarNutricionista(@RequestBody NutricionistaResource nutricionista) {
+    serviceCadastro.cadastro(nutricionista);
+  }
 
-    @DeleteMapping(path = "/nutricionista/delete/{id}")
-    public void deleteNutricionista(
-            @PathVariable(name = "id", required = true) Long id)
-            throws NutricionistaNotFoundException {
-        serviceBuscarPorId.deletarPorId(id);
-    }
+  @DeleteMapping(path = "/nutricionista/delete/{id}")
+  public void deleteNutricionista(@PathVariable(name = "id", required = true) Long id)
+      throws NutricionistaNotFoundException {
+    serviceBuscarPorId.deletarPorId(id);
+  }
 
 }

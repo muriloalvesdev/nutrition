@@ -14,54 +14,53 @@ import javax.persistence.Table;
 @Table(name = "nutricionista")
 public class Nutricionista implements Serializable {
 
-    private static final long serialVersionUID = 3862024889868951158L;
+  private static final long serialVersionUID = 3862024889868951158L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
 
-    private String nome;
-    private LocalDate idade;
+  private String nome;
+  private LocalDate idade;
 
-    @Column(name = "codigo_registro")
-    private String codigoRegistro;
+  @Column(name = "codigo_registro")
+  private String codigoRegistro;
 
-    @Column(name = "id_paciente")
-    private Long idPaciente;
+  @Column(name = "id_paciente")
+  private Long idPaciente;
 
-    public Nutricionista() {
-    }
+  public Nutricionista() {}
 
-    public String getNome() {
-        return nome;
-    }
+  public String getNome() {
+    return nome;
+  }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-    public LocalDate getIdade() {
-        return idade;
-    }
+  public LocalDate getIdade() {
+    return idade;
+  }
 
-    public void setIdade(LocalDate idade) {
-        this.idade = idade;
-    }
+  public void setIdade(LocalDate idade) {
+    this.idade = idade;
+  }
 
-    public String getCodigoRegistro() {
-        return codigoRegistro;
-    }
+  public String getCodigoRegistro() {
+    return codigoRegistro;
+  }
 
-    public void setCodigoRegistro(String codigoRegistro) {
-        this.codigoRegistro = codigoRegistro;
-    }
+  public void setCodigoRegistro(String codigoRegistro) {
+    this.codigoRegistro = codigoRegistro;
+  }
 
-    public Long getId_paciente() {
-        return idPaciente;
-    }
+  public Long getId_paciente() {
+    return idPaciente;
+  }
 
-    public void setId_paciente(Long idPaciente) {
-        this.idPaciente = idPaciente;
-    }
+  public void setId_paciente(Long idPaciente) {
+    this.idPaciente = idPaciente;
+  }
 
 }

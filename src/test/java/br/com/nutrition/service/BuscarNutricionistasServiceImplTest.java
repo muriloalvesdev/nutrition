@@ -23,40 +23,32 @@ import br.com.nutrition.repository.NutricionistaRepository;
 @Sql(scripts = "/sql/insert_nutri_buscar_todos_os_nutri.sql")
 public class BuscarNutricionistasServiceImplTest {
 
-    @Autowired
-    private BuscarNutricionistasServiceImpl serviceImpl;
+  @Autowired
+  private BuscarNutricionistasServiceImpl serviceImpl;
 
-    @Autowired
-    private NutricionistaRepository nutricionistaRepository;
+  @Autowired
+  private NutricionistaRepository nutricionistaRepository;
 
-    @Test
-    public void buscarTodosOsNutricionistasTest() {
-        List<Nutricionista> listaNutricionistas = serviceImpl
-                .buscarTodosOsNutricionistas();
+  @Test
+  public void buscarTodosOsNutricionistasTest() {
+    List<Nutricionista> listaNutricionistas = serviceImpl.buscarTodosOsNutricionistas();
 
-        List<Nutricionista> listaNutricionistasDatabase = nutricionistaRepository
-                .findAll();
+    List<Nutricionista> listaNutricionistasDatabase = nutricionistaRepository.findAll();
 
-        Nutricionista nutricionistaService = listaNutricionistas.stream()
-                .filter(nutri -> nutri.getNome().equals("Flavio")).findFirst()
-                .get();
+    Nutricionista nutricionistaService = listaNutricionistas.stream()
+        .filter(nutri -> nutri.getNome().equals("Flavio")).findFirst().get();
 
-        Nutricionista nutricionistaDatabase = listaNutricionistasDatabase
-                .stream().filter(nutri -> nutri.getNome().equals("Flavio"))
-                .findFirst().get();
+    Nutricionista nutricionistaDatabase = listaNutricionistasDatabase.stream()
+        .filter(nutri -> nutri.getNome().equals("Flavio")).findFirst().get();
 
-        assertNotNull(Objects.nonNull(listaNutricionistas));
-        assertEquals(nutricionistaDatabase.getNome(),
-                nutricionistaService.getNome());
-        assertEquals(nutricionistaDatabase.getCodigoRegistro(),
-                nutricionistaService.getCodigoRegistro());
-        assertEquals(nutricionistaDatabase.getId_paciente(),
-                nutricionistaService.getId_paciente());
-        assertEquals(nutricionistaDatabase.getIdade(),
-                nutricionistaService.getIdade());
-        assertEquals(listaNutricionistas.size(),
-                listaNutricionistasDatabase.size());
+    assertNotNull(Objects.nonNull(listaNutricionistas));
+    assertEquals(nutricionistaDatabase.getNome(), nutricionistaService.getNome());
+    assertEquals(nutricionistaDatabase.getCodigoRegistro(),
+        nutricionistaService.getCodigoRegistro());
+    assertEquals(nutricionistaDatabase.getId_paciente(), nutricionistaService.getId_paciente());
+    assertEquals(nutricionistaDatabase.getIdade(), nutricionistaService.getIdade());
+    assertEquals(listaNutricionistas.size(), listaNutricionistasDatabase.size());
 
-    }
+  }
 
 }
