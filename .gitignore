@@ -1,0 +1,8 @@
+# Ignora todos os arquivos com extensão .txt
+#*.txt
+
+# Ignora uma pasta
+.idea
+
+# Remove do .gitignore o arquivo .gitkeep dentro da pasta
+#!uploads/.gitkeep
